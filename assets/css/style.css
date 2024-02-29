@@ -1,0 +1,125 @@
+/* css reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+:root {
+    --font-title: 'Montserrat';
+    --font-body: 'Poppins';
+    --destak-color: #D55EFF;
+    --white: #f3f3f3;
+    --black: #141414;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body{
+    position: relative;
+}
+
+::selection{
+    color: var(--white);
+    background-color: var(--destak-color);
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    gap: 2.6rem;
+    position: relative;
+    align-items: flex-start;
+    
+    padding: 10rem 0 0 10rem;
+    width: 100vw;
+    height: 100vh;
+
+    overflow: hidden;
+}
+
+header::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    /* background-color: red; */
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+    background-image: url("../images/background-hero.png") ;
+    background-size: cover;
+    animation: zoom 10s forwards;
+    /* opacity: .2; */
+    /* display: block; */
+}
+
+
+h1 {
+    color: var(--destak-color);
+    text-shadow: 1px 5px 6px rgba(255,255,255,.4);
+    font-family: var(--font-title);
+    font-size: 4.5rem;
+    margin: 0 5.4rem;
+}
+
+h2 {
+    font-family: var(--font-title);
+    font-weight: 700;
+    font-size: 4rem;
+}
+
+p{
+    font-family: var(--font-body);
+    font-size: 2rem;
+}
+
+span#subtitulo{
+    color: var(--white);
+    font-family: var(--font-title);
+    font-weight: 700;
+    font-size: 2.5rem;
+    display: block;
+    margin: 2rem 5.4rem;
+}
+
+.botao{
+    display: flex;
+    gap: 1rem;
+    color: var(--white);
+    margin: 0 5.4rem;
+    font-family: var(--font-body);
+    background-color: var(--destak-color);
+    padding: .25rem 1rem;
+    border-radius: .5rem;
+    transition: opacity .5s;
+}
+
+a:hover{
+    opacity: .8;
+}
+
+@keyframes zoom {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(1.5);
+    }
+}
+
+#secao-apresentacao{
+    display: flex;
+    /* align-items: center; */
+    gap: 3rem;
+    padding: 2rem;
+}
+
+#avatar{
+    border-radius: 50% ;
+    height: 18.8rem;
+    width: 18.8rem;
+}
