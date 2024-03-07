@@ -123,3 +123,57 @@ a:hover{
     height: 18.8rem;
     width: 18.8rem;
 }
+
+#secao-projetos{
+    height: 100vh;
+    background-color: #252739;
+}
+
+#secao-projetos ul {
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    place-items: center;
+}
+
+#secao-projetos li{
+    list-style: none;
+}
+
+.card {
+   max-width: 300px; 
+   height: 420px;
+   color: var(--white);
+   position: relative;
+   cursor: pointer;
+}
+
+.card:hover .card-text{
+  opacity: 1;  
+}
+
+.card:hover .image-wrapper{
+    opacity: .3;
+}
+
+.image-wrapper {
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+
+.image-wrapper img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.card-text{
+    position: absolute;
+    top: 0;
+    opacity: 0;
+    transition: opacity 1s;
+}
+
+
+
